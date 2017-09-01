@@ -1,4 +1,4 @@
 baseURL = "https://radiant-sierra-54599.herokuapp.com/"
 languageCode = "en-us"
 title = "React Standards"
-theme = “hyde-x”
+
