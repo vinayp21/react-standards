@@ -28,3 +28,40 @@ const ReservationItem = \<ReservationCard />;</br> {{% /alert %}}
  import ReservationCard from './ReservationCard'; </br>{{% /alert %}}
 {{% alert theme="info"%}}//good</br>
 const reservationItem = \<ReservationCard />;{{% /alert %}}
+
+## File and Folder Naming-
+```
+/actions/...
+/components/common/Link.js
+/components/common/...
+/components/forms/TextBox.js
+/components/forms/TextBox.res/style.css
+/components/forms/TextBox.locale/en-US/...
+/components/forms/...
+/components/layout/App.js - The top-level React component
+/components/layout/App.res/style.css
+/components/layout/App.locale/en-US/...
+/components/layout/Navigation.js
+/components/layout/Navigation.res/style.css
+/components/layout/Navigation.res/data.json
+/components/layout/Navigation.locale/en-US/...
+/components/layout/...
+/components/pages/Home.js
+/components/pages/Home.css
+/components/pages/Account/index.js
+/components/pages/Account/index.css
+/components/pages/...
+/core/...
+/constants/...
+/stores/...
+```
+
+## CSS Class Names
+
+CSS class names should be prefixed with a single letter corresponding to the component's type.
+
+For example:
+```
+Component: /components/forms/TextBox.js, CSS class name: f-textbox { ... }
+Component: /components/layout/Navigation.js, CSS class name: l-nagiation { ... }
+```

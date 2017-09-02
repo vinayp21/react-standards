@@ -7,12 +7,21 @@ weight = 20
 
 ## Class vs React.createClass vs stateless components
 
-Syntax-
+### Syntax-
 
 | Class | React.createClass | stateless |
 |:--|:--|:--|
 | const MyComponent = React.createClass({  });| Class MyComponent extends React.Component{  } | Class MyComponent extends React.Component{  }|
 
+### Basic Rules- 
+<ul>
+  <li>Only include one React component per file.</li>
+  <li>However, multiple Stateless, or Pure, Components are allowed per file.</li>
+  <li>Always use JSX syntax</li>
+  <li>Do not use React.createElement unless you're initializing the app from a file that is not JSX</li>
+</ul>
+
+Stateless functions should be preferred for simple components that do not have any state (pure functions of their props). 
 If you have internal state and/or refs, prefer class extends React.Component over React.createClass -
 
 Example-
