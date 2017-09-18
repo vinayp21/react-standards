@@ -2,7 +2,6 @@
 title = "React Standards"
 description = ""
 date = "2017-04-24T18:36:24+02:00"
-
 +++
 
 # React Redux Coding Standards
@@ -10,8 +9,5 @@ date = "2017-04-24T18:36:24+02:00"
 
 ## Main features
 
-* React Best Practice 
+* React Best Practice
 * Redux Best Practice
-
-
-
