@@ -1,7 +1,7 @@
 +++
 title = "React Components"
 description = ""
-weight = 20
+weight = 22
 +++
 
 
@@ -13,7 +13,7 @@ weight = 20
 |:--|:--|:--|
 | const MyComponent = React.createClass({  });| Class MyComponent extends React.Component{  } | Class MyComponent extends React.Component{  }|
 
-### Basic Rules- 
+### Basic Rules-
 <ul>
   <li>Only include one React component per file.</li>
   <li>However, multiple Stateless, or Pure, Components are allowed per file.</li>
@@ -21,22 +21,27 @@ weight = 20
   <li>Do not use React.createElement unless you're initializing the app from a file that is not JSX</li>
 </ul>
 
-Stateless functions should be preferred for simple components that do not have any state (pure functions of their props). 
+Stateless functions should be preferred for simple components that do not have any state (pure functions of their props).
 If you have internal state and/or refs, prefer class extends React.Component over React.createClass -
 
 Example-
 
 {{% alert theme="danger" %}} //bad </br>
-const Listing = React.createClass({</br>
-
-  render() {</br>
-    return \<div>{this.state.hello}\</div>;</br>
+```jsx
+const Listing = React.createClass({
+  render() {
+      return (
+        <div>
+          {this.state.hello}
+        </div>);
   }
-});{{% /alert %}}
+});
+```
+{{% /alert %}}
 
 {{% alert theme="info"%}}//good</br>
 class Listing extends React.Component {</br>
-  
+
   render() {</br>
     return \<div>{this.state.hello}\</div>;</br>
   }
@@ -59,4 +64,3 @@ const Listing = ({ hello }) => (</br>
 function Listing({ hello }) {</br>
   return \<div>{hello}\</div>;</br>
 }{{% /alert %}}
-

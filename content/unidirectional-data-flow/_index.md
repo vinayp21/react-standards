@@ -1,7 +1,7 @@
 +++
 title = "Unidirectional data flow"
 description = ""
-weight = 20
+weight = 28
 +++
 
  In React data flows down the tree from parent to child. This makes tracking the source and destination easy compared to other architectures where data may be coming from many parts of the application.
