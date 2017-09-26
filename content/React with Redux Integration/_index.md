@@ -2,6 +2,7 @@
 title = "React with Redux Integration"
 description = ""
 date = "2017-04-24T18:36:24+02:00"
+weight = 31
 +++
 
 React and Redux don’t have a direct relationship – Redux controls an app’s state changes, while React renders the view of states.</br>
@@ -32,14 +33,16 @@ Here’s what our App‘s component containers/App.js should look like:</br>
 
 ```
 // import statements goes here
+import {connect} from 'react-redux';
+import {addTodo} from 'actions/TodoActions';
 
 class App extends Component {
   render() {
-    	const { todos, actions } = this.props;
+    	const { todos, addTodo } = this.props;
         return (
         	<div>
-            	<Header addTodo={actions.addTodo} />
-                <MainSection todos={todos} actions={actions} />
+            	<Header addTodo={addTodo} />
+                <MainSection todos={todos} />
             </div>
         );
     }
@@ -47,25 +50,23 @@ class App extends Component {
 
 App.propTypes = {
   todos: PropTypes.array.isRequired,
-    actions: PropTypes.object.isRequired
+  actions: PropTypes.object.isRequired,
+  addTodo: PropTypes.func
 };
 
-function mapStateToProps(state) {
+
+const mapStateToProps = (state) => {
   return {
     	todos: state.todos
     };
-}
+};
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = {
   return {
-    	actions: bindActionCreators(TodoActions, dispatch)
+    	addTodo
     };
 }
-
-export default connect(
-  mapStateToProps,
-    mapDispatchToProps
-)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 ```
 
 Here we’ll see that App is actually just a simple React component and seems to have little to do with Redux.M</br>

@@ -1,8 +1,18 @@
 +++
-title = "React State"
+title = "Component State"
 description = ""
-weight = 22
+weight = 23
 +++
+
+## initializing State
+```js
+constructor(props) {
+		super(props);
+		this.state = {
+			comment: "Initial Comment"
+		};
+	}
+```
 
 ## Using State Correctly
 The only place where you can assign this.state is the constructor.</br>
@@ -18,7 +28,7 @@ Instead, use setState():
 
 {{% alert theme="info" %}} // Correct </br>
 
-this.state.setState({comment: 'Hello'});
+this.setState({comment: 'Hello'});
 
 {{% /alert %}}
 

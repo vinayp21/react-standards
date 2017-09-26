@@ -1,7 +1,7 @@
 +++
 title = "Why Redux?"
 description = ""
-weight = 21
+weight = 30
 +++
 
 As the javascript single page applications are becoming too complicated to handle, with the current requirements where it needs to manage the state of the application which includes server responses, cached data and locally persisted data which has not yet persisted in server.  

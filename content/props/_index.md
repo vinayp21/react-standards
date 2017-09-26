@@ -1,8 +1,11 @@
 +++
-title = "Props"
+title = "Component Props"
 description = ""
-weight = 23
+weight = 24
 +++
+
+## What are Props
+Props are nothing but arbitrary inputs which a React Component Receives  based on which it returns elements describing what should appear on the screen.
 
 ## Props are Read-Only
 

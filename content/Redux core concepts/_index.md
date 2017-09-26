@@ -1,8 +1,9 @@
 
 +++
-title = "React core concepts"
+title = "Redux core concepts"
 description = ""
 date = "2017-04-24T18:36:24+02:00"
+weight = 29
 +++
 
 
